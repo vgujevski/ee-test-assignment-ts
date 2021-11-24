@@ -1,0 +1,22 @@
+.app-container {
+  max-width: 944px;
+  margin-top: 32px;
+  border: 1px solid $color-main;
+  border-radius: $border-radius;
+  min-width: 380px;
+  overflow-wrap: normal;
+}
+
+.configurator-container {
+  display: flex;
+  flex-direction: row;
+  margin: 32px;
+  margin-top: 46px;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint-l) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
