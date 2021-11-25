@@ -3,7 +3,7 @@ export enum LabelText {
   SELECT_COLOR = "Select color:",
   SELECT_POWER = "Select power:",
   WARP_DRIVE = "Warp drive:",
-  SELECT_OPTION_PACKAGE = "Select options package:",
+  SELECT_OPTION_PACKAGE = "Select option package:",
   BASE_PRICE = "Base price:",
   COLOR = "Color:",
   POWER = "Power:",

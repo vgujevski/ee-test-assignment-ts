@@ -8,6 +8,8 @@ import {
   selectOptionPackage,
   selectTotalPrice,
 } from "./componentsSlice";
+import { LabelText } from "../resources/LabelText";
+import { TestID } from "../resources/TestID";
 import { BASE_PRICE } from "../data/spaceshipComponents";
 
 export const PriceCalculator = () => {
@@ -18,47 +20,47 @@ export const PriceCalculator = () => {
   const totalPrice = useAppSelector(selectTotalPrice);
 
   return (
-    <div data-testid="total-calc" className="price-calc-container">
+    <div data-testid={TestID.TOTAL_CALC} className="price-calc-container">
       <div className="details-container">
         <div className="item">
-          <div className="label">Base price:</div>
-          <div data-testid="total-base" className="amount">
+          <div className="label">{LabelText.BASE_PRICE}</div>
+          <div data-testid={TestID.TOTAL_BASE} className="amount">
             {BASE_PRICE}&euro;
           </div>
         </div>
 
         <div className="item">
-          <div className="label">Color:</div>
-          <div data-testid="total-color" className="amount">
+          <div className="label">{LabelText.COLOR}</div>
+          <div data-testid={TestID.TOTAL_COLOR} className="amount">
             +{color.price}&euro;
           </div>
         </div>
 
         <div className="item">
-          <div className="label">Power:</div>
-          <div data-testid="total-power" className="amount">
+          <div className="label">{LabelText.POWER}</div>
+          <div data-testid={TestID.TOTAL_POWER} className="amount">
             +{power.price}&euro;
           </div>
         </div>
 
         <div className="item">
-          <div className="label">Warp Drive:</div>
-          <div data-testid="total-warp-drive" className="amount">
+          <div className="label">{LabelText.WARP_DRIVE}</div>
+          <div data-testid={TestID.TOTAL_WARP_DRIVE} className="amount">
             +{warpDrive.price}&euro;
           </div>
         </div>
 
         <div className="item">
-          <div className="label">Option Package:</div>
-          <div data-testid="total-option-package" className="amount">
+          <div className="label">{LabelText.OPTION_PACKAGE}</div>
+          <div data-testid={TestID.TOTAL_OPTION_PACKAGE} className="amount">
             +{optionPackage.price}&euro;
           </div>
         </div>
       </div>
       <div className="total-container">
         <div className="total">
-          <div className="label">Total:</div>
-          <div data-testid="total-price" className="amount cost">
+          <div className="label">{LabelText.TOTAL}</div>
+          <div data-testid={TestID.TOTAL_PRICE} className="amount cost">
             {totalPrice}&euro;
           </div>
         </div>

@@ -2,7 +2,8 @@ import React from "react";
 import { colorOptions } from "../data/spaceshipComponents";
 import { selectColorOption, setColorOption } from "./componentsSlice";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
-
+import { LabelText } from "../resources/LabelText";
+import { TestID } from "../resources/TestID";
 import { ColorOption } from "../types";
 
 export const SelectColor = () => {
@@ -14,12 +15,12 @@ export const SelectColor = () => {
   };
 
   return (
-    <div data-testid="select-color" className="part-selector-container">
-      <h2>Select Color:</h2>
+    <div data-testid={TestID.SELECT_COLOR} className="part-selector-container">
+      <h2>{LabelText.SELECT_COLOR}</h2>
       <div className="part-list">
         {colorOptions.map((item) => (
           <div
-            data-testid="color-option"
+            data-testid={TestID.COLOR_OPTION}
             key={item.id}
             onClick={() => onSelectColorClicked(item)}
             className={
@@ -30,7 +31,10 @@ export const SelectColor = () => {
               className="color m-top-m"
               style={{ backgroundColor: item.color }}
             ></div>
-            <div data-testid="color-option-price" className="price m-top-xs">
+            <div
+              data-testid={TestID.COLOR_OPTION_PRICE}
+              className="price m-top-xs"
+            >
               +{item.price}&euro;
             </div>
             <div className="name m-top-m m-bottom-l">{item.name}</div>

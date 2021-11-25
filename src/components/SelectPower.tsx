@@ -3,6 +3,8 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { powerOptions } from "../data/spaceshipComponents";
 import { setPowerOption, selectPowerOption } from "./componentsSlice";
 import { PowerOption } from "../types";
+import { LabelText } from "../resources/LabelText";
+import { TestID } from "../resources/TestID";
 
 export const SelectPower = () => {
   const disptach = useAppDispatch();
@@ -17,11 +19,11 @@ export const SelectPower = () => {
       data-testid="select-power"
       className="part-selector-container m-top-xl"
     >
-      <h2>Select Power:</h2>
+      <h2>{LabelText.SELECT_POWER}</h2>
       <div className="part-list">
         {powerOptions.map((item) => (
           <div
-            data-testid="power-option"
+            data-testid={TestID.POWER_OPTION}
             key={item.id}
             onClick={() => onSelectPowerClicked(item)}
             className={
@@ -29,7 +31,10 @@ export const SelectPower = () => {
             }
           >
             <div className="name m-top-m m-bottom-m">{item.name}</div>
-            <div data-testid="power-option-price" className="price m-bottom-s">
+            <div
+              data-testid={TestID.POWER_OPTION_PRICE}
+              className="price m-bottom-s"
+            >
               +{item.price}&euro;
             </div>
           </div>

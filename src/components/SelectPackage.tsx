@@ -3,6 +3,8 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { packageOptions } from "../data/spaceshipComponents";
 import { setOptionPackage, selectOptionPackage } from "./componentsSlice";
 import { PackageOption } from "../types";
+import { LabelText } from "../resources/LabelText";
+import { TestID } from "../resources/TestID";
 
 export const SelectPackage = () => {
   const disptach = useAppDispatch();
@@ -16,11 +18,11 @@ export const SelectPackage = () => {
       data-testid="select-package"
       className="part-selector-container m-top-xl"
     >
-      <h2>Select Option Package:</h2>
+      <h2>{LabelText.SELECT_OPTION_PACKAGE}</h2>
       <div className="part-list">
         {packageOptions.map((item) => (
           <div
-            data-testid="package-option"
+            data-testid={TestID.PACKAGE_OPTION}
             key={item.id}
             onClick={() => onSelectPackageClicked(item)}
             className={
@@ -29,7 +31,7 @@ export const SelectPackage = () => {
           >
             <div className="name m-top-m">{item.name}</div>
             <div
-              data-testid="package-option-price"
+              data-testid={TestID.PACKAGE_OPTION_PRICE}
               className="price m-bottom-s m-top-s"
             >
               +{item.price}&euro;

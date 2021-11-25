@@ -3,7 +3,7 @@ export enum TestID {
   COLOR_OPTION = "color-option",
   PACKAGE_OPTION = "package-option",
   POWER_OPTION = "power-option",
-  WARP_DRIVE_OPTION = "warp-drive-aoption",
+  WARP_DRIVE_OPTION = "warp-drive-option",
   TOTAL_COLOR = "total-color",
   TOTAL_OPTION_PACKAGE = "total-option-package",
   TOTAL_POWER = "total-power",
@@ -16,4 +16,8 @@ export enum TestID {
   SELECT_POWER = "select-power",
   SELECT_WARP_DRIVE = "select-warp-drive",
   TOTAL_CALC = "total-calc",
+  COLOR_OPTION_PRICE = "color-option-price",
+  PACKAGE_OPTION_PRICE = "package-option-price",
+  POWER_OPTION_PRICE = "power-option-price",
+  WARP_DRIVE_OPTION_PRICE = "warp-drive-option-price",
 }
